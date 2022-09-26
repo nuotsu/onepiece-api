@@ -1,0 +1,37 @@
+{
+	"root": true,
+	"api": {
+		"projectId": "i9654vp3",
+		"dataset": "production"
+	},
+	"project": {
+		"name": "One Piece API"
+	},
+	"plugins": [
+		"@sanity/base",
+		"@sanity/default-layout",
+		"@sanity/default-login",
+		"@sanity/desk-tool"
+	],
+	"env": {
+		"development": {
+			"plugins": [
+				"@sanity/vision"
+			]
+		}
+	},
+	"parts": [
+		{
+			"name": "part:@sanity/base/schema",
+			"path": "./schemas/schema"
+		},
+		{
+			"name": "part:@sanity/desk-tool/structure",
+			"path": "./desk/structure-config.js"
+		},
+		{
+			"implements": "part:@sanity/dashboard/config",
+			"path": "./desk/dashboard-config.js"
+		}
+	]
+}
