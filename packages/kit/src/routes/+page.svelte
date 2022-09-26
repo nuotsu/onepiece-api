@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1><ruby>One Piece<rt>ワンピース</rt></ruby> API</h1>
+
+<ul>
+	{#each data.chapters as chapter}
+		<li>
+			{chapter.number}話 "{chapter.title}" ({chapter.quotes.length})
+		</li>
+	{/each}
+</ul>
+
+<script>
+	export let data
+</script>

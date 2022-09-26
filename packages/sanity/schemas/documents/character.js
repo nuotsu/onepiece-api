@@ -3,7 +3,7 @@ import Icon from '../../components/Icon'
 export default {
 	name: 'character',
 	title: 'Character',
-	icon: Icon('🗣'),
+	icon: Icon('👤'),
 	type: 'document',
 	fields: [
 		{
