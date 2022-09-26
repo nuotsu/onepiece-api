@@ -1,10 +1,17 @@
 <figure>
 	<blockquote>
-		<PortableText
-			value={content}
-			components={components}
-		/>
+		{#if content}
+			<PortableText
+				value={content}
+				components={components}
+			/>
+		{/if}
+
+		{#if quote}
+			<p>{@html quote}</p>
+		{/if}
 	</blockquote>
+
 	<figcaption class="text-right">
 		—
 		{#each saidBy as character}
@@ -14,7 +21,11 @@
 		{/each}
 
 		{#if chapter}
-			<cite>({chapter.number}話 "{chapter.title}")</cite>
+			<cite>
+				<a href="/chapter/{chapter.number}">
+					{chapter.number}話 "{chapter.title}"
+				</a>
+			</cite>
 		{/if}
 	</figcaption>
 </figure>
@@ -23,7 +34,7 @@
 	import { PortableText } from '@portabletext/svelte'
 	import Dots from '$lib/pt/Dots.svelte'
 
-	export let content, saidBy, chapter
+	export let quote, content, saidBy, chapter
 
 	const components = {
 		marks: {

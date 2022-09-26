@@ -22,6 +22,7 @@
 		"@portabletext/svelte": "^1.0.1",
 		"@sanity/client": "^3.4.1",
 		"@sanity/image-url": "^1.0.1",
+		"fuzzysort": "^2.0.1",
 		"groq": "^2.33.2"
 	}
 }

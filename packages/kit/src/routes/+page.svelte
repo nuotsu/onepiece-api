@@ -11,7 +11,7 @@
 </ul>
 
 <script>
-	import Search from './index/Search.svelte'
+	import Search from '$lib/search/Search.svelte'
 
 	export let data
 </script>
