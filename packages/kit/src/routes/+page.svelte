@@ -1,9 +1,9 @@
-<h1><ruby>One Piece<rt>ワンピース</rt></ruby> API</h1>
-
 <ul>
 	{#each data.chapters as chapter}
 		<li>
-			{chapter.number}話 "{chapter.title}" ({chapter.quotes.length})
+			<a href="/chapter/{chapter.number}">
+				{chapter.number}話 "{chapter.title}" ({chapter.quotes.length})
+			</a>
 		</li>
 	{/each}
 </ul>

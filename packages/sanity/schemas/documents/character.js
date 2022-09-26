@@ -19,12 +19,15 @@ export default {
 					type: 'string',
 					validation: Rule => Rule.required(),
 				},
-				{
-					name: 'other',
-					type: 'array',
-					of: [{ type: 'string' }],
-				},
 			],
+		},
+		{
+			name: 'slug',
+			type: 'slug',
+			options: {
+				source: 'name.short',
+			},
+			validation: Rule => Rule.required(),
 		},
 	],
 	preview: {

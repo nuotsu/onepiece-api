@@ -1215,6 +1215,13 @@
     "@portabletext/toolkit" "^1.0.5"
     "@portabletext/types" "^1.0.3"
 
+"@portabletext/svelte@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@portabletext/svelte/-/svelte-1.0.1.tgz#e1f11cf172dab6eb4b2dce26a8d8f42f251c0293"
+  integrity sha512-37nyWavAl/MykqN5mrCmog9rYy+Bj6v64qn5oO2aj5GLF/BVz+zJThhdO2Ks70B6gkJXjVHDrcNs3qeIdZ53EA==
+  dependencies:
+    "@portabletext/toolkit" "^1.0.5"
+
 "@portabletext/toolkit@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-1.0.5.tgz#2bbcc527a6dd1f6594fb538ff9670a9958147197"
