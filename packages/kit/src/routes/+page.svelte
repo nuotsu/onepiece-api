@@ -1,3 +1,5 @@
+<Search/>
+
 <ul>
 	{#each data.chapters as chapter}
 		<li>
@@ -9,5 +11,7 @@
 </ul>
 
 <script>
+	import Search from './index/Search.svelte'
+
 	export let data
 </script>
