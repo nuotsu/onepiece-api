@@ -1,4 +1,4 @@
-<section>
+<section class="section">
 	<h2>Updates</h2>
 
 	<ul>

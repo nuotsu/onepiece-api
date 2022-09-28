@@ -1,4 +1,4 @@
-<figure>
+<figure class="bg-bounty">
 	<blockquote>
 		{#if content}
 			<PortableText
@@ -15,15 +15,15 @@
 	<figcaption class="text-right">
 		—
 		{#each saidBy as character}
-			<a href="/character/{character.slug.current}">
+			<a class="link-hover" href="/character/{character.slug.current}">
 				{character.name.short}
 			</a>
 		{/each}
 
 		{#if chapter}
 			<cite>
-				<a href="/chapter/{chapter.number}">
-					{chapter.number}話 "{chapter.title}"
+				<a class="link-hover" href="/chapter/{chapter.number}">
+					({chapter.number}話 "{chapter.title}")
 				</a>
 			</cite>
 		{/if}

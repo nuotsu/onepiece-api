@@ -1,4 +1,4 @@
-<section>
+<section class="section">
 	<label>
 		<input
 			class="w-full"
@@ -11,39 +11,13 @@
 	<Keywords/>
 
 	{#if $query}
-		<div class="results">
-			<h2>{results.length} results</h2>
-
-			<ul>
-				{#each results as result}
-					<li><Result {result} /></li>
-				{/each}
-			</ul>
-		</div>
+		<ResultList/>
 	{/if}
 </section>
 
-<style>
-	.results {
-		border: 1px solid;
-	}
-</style>
-
 <script>
-	import { page } from '$app/stores'
-	import { go } from 'fuzzysort'
 	import Keywords from './Keywords.svelte'
-	import Result from './Result.svelte'
-
-	const { quotes_str } = $page.data
-
-	const all_quotes = quotes_str
-		.flatMap(({ quotes, ...chapter }) => quotes.map(q => ({
-			chapter,
-			...q
-		})))
-
-	$: results = go($query, all_quotes, { key: 'content' })
+	import ResultList from './ResultList.svelte'
 </script>
 
 <script context="module">

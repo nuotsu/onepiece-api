@@ -5,7 +5,7 @@
 		"dataset": "production"
 	},
 	"project": {
-		"name": "⊗ne Piece API"
+		"name": "⊗NE PIECE"
 	},
 	"plugins": [
 		"@sanity/base",

@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>⊗NE PIECE</title>
+</svelte:head>
+
 <Search/>
 <ChapterList/>
 <UpdateList/>

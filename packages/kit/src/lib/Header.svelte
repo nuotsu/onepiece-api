@@ -1,5 +1,5 @@
-<header>
+<header class="section text-center">
 	<a href="/">
-		<ruby>⊗ne Piece<rt>ワンピース</rt></ruby>
+		<ruby>⊗NE PIECE<rt>ワンピース</rt></ruby>
 	</a>
 </header>

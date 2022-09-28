@@ -1,15 +1,19 @@
-<h1>
-	{character.name.short}
-	{#if character.name.full}
-		<small>({character.name.full})</small>
-	{/if}
-</h1>
+<header class="section text-center">
+	<h1>
+		{character.name.short}
+		{#if character.name.full}
+			<small>({character.name.full})</small>
+		{/if}
+	</h1>
+</header>
 
-{#each filtered as chapter}
-	{#each chapter.quotes as quote}
-		<Quote {...quote} {chapter} />
+<section class="section grid gap-[1em]">
+	{#each filtered as chapter}
+		{#each chapter.quotes as quote}
+			<Quote {...quote} {chapter} />
+		{/each}
 	{/each}
-{/each}
+</section>
 
 <script>
 	import { page } from '$app/stores'
