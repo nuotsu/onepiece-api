@@ -4,6 +4,7 @@ import groq from 'groq'
 export async function load() {
 	const data = await client.fetch(groq`{
 		'chapters': *[_type == 'chapter']|order(number desc),
+
 		'quotes_str': *[_type == 'chapter']{
 			number,
 			title,
@@ -14,6 +15,12 @@ export async function load() {
 					slug
 				}
 			}
+		},
+
+		'updates': *[_type == 'chapter']|order(_createdAt desc){
+			_createdAt,
+			number,
+			title
 		}
 	}`)
 
