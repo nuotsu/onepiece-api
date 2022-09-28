@@ -38,10 +38,15 @@ export default {
 	},
 	orderings: [
 		{
-			title: 'Name',
+			title: 'Name (short)',
 			name: 'name.short',
 			by: [{field: 'name.short', direction: 'asc'}],
 			default: true,
+		},
+		{
+			title: 'Name (full)',
+			name: 'name.full',
+			by: [{field: 'name.full', direction: 'asc'}],
 		},
 	],
 }
