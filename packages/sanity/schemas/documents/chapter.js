@@ -7,6 +7,11 @@ export default {
 	type: 'document',
 	fields: [
 		{
+			name: 'spoiler',
+			type: 'boolean',
+			default: true,
+		},
+		{
 			name: 'number',
 			type: 'number',
 			validation: Rule => Rule.min(0).required(),
@@ -25,9 +30,11 @@ export default {
 		select: {
 			title: 'title',
 			number: 'number',
+			spoiler: 'spoiler',
 		},
-		prepare: ({ number, ...selection }) => ({
+		prepare: ({ number, spoiler, ...selection }) => ({
 			subtitle: `${ number }話`,
+			media: Icon(spoiler ? '📓' : '📕'),
 			...selection
 		}),
 	},

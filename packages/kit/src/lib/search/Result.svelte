@@ -1,11 +1,11 @@
 <Quote
-	quote={highlight(result, '<mark>', '</mark>')}
+	quote={fuzzysort.highlight(result, '<mark>', '</mark>')}
 	{saidBy}
 	{chapter}
 />
 
 <script>
-	import { highlight } from 'fuzzysort'
+	import fuzzysort from 'fuzzysort'
 	import Quote from '../Quote.svelte'
 
 	export let result

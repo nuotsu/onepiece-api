@@ -1,4 +1,4 @@
-<figure class="bg-bounty">
+<figure class="bg-bounty p-2">
 	<blockquote>
 		{#if content}
 			<PortableText
@@ -12,7 +12,7 @@
 		{/if}
 	</blockquote>
 
-	<figcaption class="text-right">
+	<figcaption class="text-right <sm:text-xs">
 		—
 		{#each saidBy as character}
 			<a class="link-hover" href="/character/{character.slug.current}">

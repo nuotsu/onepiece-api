@@ -16,17 +16,27 @@
 
 <script>
 	import { page } from '$app/stores'
-	import { go } from 'fuzzysort'
+	import { spoilers } from '$lib/SpoilerToggle.svelte'
+	import fuzzysort from 'fuzzysort'
 	import { query } from './Search.svelte'
 	import Result from './Result.svelte'
 
 	const { quotes_str } = $page.data
 
-	const all_quotes = quotes_str
+	$: all_quotes = quotes_str
 		.flatMap(({ quotes, ...chapter }) => quotes.map(q => ({
 			chapter,
 			...q
 		})))
+		.filter(q => {
+			if ($spoilers) {
+				return !q.chapter.spoiler
+			} else {
+				return true
+			}
+		})
 
-	$: results = go($query, all_quotes, { key: 'content' })
+	$: console.log(all_quotes)
+
+	$: results = fuzzysort.go($query, all_quotes, { key: 'content' })
 </script>

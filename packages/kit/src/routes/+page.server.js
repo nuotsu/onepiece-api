@@ -6,6 +6,7 @@ export async function load() {
 		'chapters': *[_type == 'chapter']|order(number desc),
 
 		'quotes_str': *[_type == 'chapter']{
+			spoiler,
 			number,
 			title,
 			quotes[]{
@@ -19,8 +20,9 @@ export async function load() {
 
 		'updates': *[_type == 'chapter']|order(_createdAt desc){
 			_createdAt,
+			spoiler,
 			number,
-			title
+			title,
 		}
 	}`)
 
