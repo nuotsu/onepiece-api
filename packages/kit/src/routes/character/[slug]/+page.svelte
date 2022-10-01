@@ -1,8 +1,13 @@
 <header class="section text-center">
 	<h1>
 		{character.name.short}
+
 		{#if character.name.full}
 			<small>({character.name.full})</small>
+		{/if}
+
+		{#if character.name.other}
+			<small>({character.name.other.join('/')})</small>
 		{/if}
 	</h1>
 </header>

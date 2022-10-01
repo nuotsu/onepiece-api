@@ -1,5 +1,6 @@
 <section class="section">
-	<label>
+	<label class="flex items-center gap-[.5ch]">
+		🔎
 		<input
 			class="w-full"
 			type="search"
@@ -14,6 +15,14 @@
 		<ResultList/>
 	{/if}
 </section>
+
+<style>
+	input {
+		appearance: none;
+		background-color: transparent;
+		border-radius: 0;
+	}
+</style>
 
 <script>
 	import Keywords from './Keywords.svelte'

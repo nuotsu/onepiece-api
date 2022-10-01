@@ -1,5 +1,7 @@
 <div class="bg-paper">
-	<h2 class="text-center">{results.length} results</h2>
+	<h2 class="text-center">
+		{results.length} result{#if results.length != 1}s{/if}
+	</h2>
 
 	<ul class="grid gap-[1em]">
 		{#each results as result}
