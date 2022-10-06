@@ -1,7 +1,7 @@
 <section class="section">
 	<h2>Updates</h2>
 
-	<ul>
+	<ul class="bordered max-h-[11em] <md:max-h-[15em] overflow-y-auto">
 		{#each updates as update}
 			{@const date = update._createdAt}
 
@@ -32,6 +32,16 @@
 	@screen sm {
 		li {
 			grid-template-columns: auto 1fr;
+		}
+	}
+
+	@screen <sm {
+		li + li {
+			margin-top: .5em;
+		}
+
+		time {
+			@apply text-xs opacity-30;
 		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <section class="section top-4 z-[1] p-2" class:sticky={$query}>
-	<label class="flex items-center border border-gray-200 bg-paper">
+	<label class="flex items-center p-0 bordered bg-paper">
 		<span class="p-2 px-4">🔎</span>
 		<input
 			class="w-full py-2 outline-none"

@@ -1,4 +1,4 @@
-<div class="p-4 border border-gray-200 bg-paper">
+<div class="bordered bg-paper">
 	<h2 class="text-center">
 		"{$query}"で検索した結果 {results.length}件該当
 	</h2>
