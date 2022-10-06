@@ -23,7 +23,7 @@
 		{#if chapter}
 			<cite>
 				<a class="link-hover" href="/chapter/{chapter.number}">
-					({chapter.number}話 "{chapter.title}")
+					(第{chapter.number}話 "{chapter.title}")
 				</a>
 			</cite>
 		{/if}

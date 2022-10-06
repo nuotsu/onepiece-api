@@ -13,9 +13,9 @@
 							{#if update.spoiler}
 								<span title="※ネタバレを含む内容">⚠️</span>
 							{/if}
-							{update.number}話 "{update.title}"
+							第{update.number}話 "{update.title}"
 						</a>
-						を追加しました。
+						を追加。
 					</p>
 				</li>
 			{/if}

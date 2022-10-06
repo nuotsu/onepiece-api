@@ -1,6 +1,6 @@
 <header class="section text-center">
 	<h1>
-		{chapter.number}話
+		第{chapter.number}話
 		{#if showSpoilers}
 			"{chapter.title}"
 		{:else}

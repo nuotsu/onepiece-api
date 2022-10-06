@@ -33,7 +33,7 @@ export default {
 			spoiler: 'spoiler',
 		},
 		prepare: ({ number, spoiler, ...selection }) => ({
-			subtitle: `${ number }話`,
+			subtitle: `第${ number }話`,
 			media: Icon(spoiler ? '📓' : '📕'),
 			...selection
 		}),

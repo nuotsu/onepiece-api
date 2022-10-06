@@ -1,9 +1,10 @@
-<fieldset class="flex flex-wrap items-end gap-[1ch]">
+<fieldset class="flex flex-wrap items-end gap-[1em] py-2 px-4 bg-gray-200 text-sm">
 	{#each keywords as { text, ruby }}
 		<button
 			class:font-bold={$query === text}
 			on:click={() => onClick(text)}
 		>
+			<span class="opacity-30">#</span>
 			{#if ruby}
 				<ruby>{text}<rt>{ruby}</rt></ruby>
 			{:else}
@@ -12,6 +13,13 @@
 		</button>
 	{/each}
 </fieldset>
+
+<style>
+	button {
+		display: flex;
+		align-items: flex-end;
+	}
+</style>
 
 <script>
 	import { query } from './Search.svelte'

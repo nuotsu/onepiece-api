@@ -9,7 +9,8 @@
 						{#if chapter.spoiler}
 							<span title="※ネタバレを含む内容">⚠️</span>
 						{/if}
-						{chapter.number}話 "{chapter.title}" ({chapter.quotes.length})
+						第{chapter.number}話 "{chapter.title}"
+						<sup>({chapter.quotes.length})</sup>
 					</a>
 				</li>
 			{/if}

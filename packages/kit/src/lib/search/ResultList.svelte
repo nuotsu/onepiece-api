@@ -1,20 +1,14 @@
-<div class="bg-paper">
+<div class="p-4 border border-gray-200 bg-paper">
 	<h2 class="text-center">
-		{results.length} result{#if results.length != 1}s{/if}
+		"{$query}"で検索した結果 {results.length}件該当
 	</h2>
 
-	<ul class="grid gap-[1em]">
+	<ul class="grid gap-[1em] max-h-[20em] overflow-y-auto mt-4 empty:hidden">
 		{#each results as result}
 			<li><Result {result} /></li>
 		{/each}
 	</ul>
 </div>
-
-<style>
-	div {
-		border: 1px dashed;
-	}
-</style>
 
 <script>
 	import { page } from '$app/stores'
@@ -30,13 +24,7 @@
 			chapter,
 			...q
 		})))
-		.filter(q => {
-			if ($spoilers) {
-				return !q.chapter.spoiler
-			} else {
-				return true
-			}
-		})
+		.filter(q => !$spoilers || !q.chapter.spoiler)
 
 	$: console.log(all_quotes)
 

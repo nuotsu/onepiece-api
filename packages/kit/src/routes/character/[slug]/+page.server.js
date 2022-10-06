@@ -9,7 +9,7 @@ export async function load({ params }) {
 		'character': *[_type == 'character' && slug.current == $slug][0],
 		'chapters': *[_type == 'chapter' && $slug in quotes[].saidBy[]->slug.current]{
 			...,
-			quotes[]{
+			quotes[$slug in saidBy[]->slug.current]{
 				...,
 				saidBy[]->
 			}

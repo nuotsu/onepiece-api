@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: `'M PLUS 1', sans-serif`,
+			},
 			colors: {
 				ink: '#000',
 				paper: '#fff',

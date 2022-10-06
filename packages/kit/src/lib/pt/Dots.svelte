@@ -1,4 +1,4 @@
-<ruby><slot></slot><rt>{'・'.repeat(dots)}</rt></ruby>
+<ruby><slot></slot><rt class="font-serif">{'・'.repeat(dots)}</rt></ruby>
 
 <script>
 	export let portableText
