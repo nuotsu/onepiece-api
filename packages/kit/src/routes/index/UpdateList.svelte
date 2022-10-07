@@ -5,12 +5,12 @@
 		{#each updates as update}
 			{@const date = update._createdAt}
 
-			{#if !($spoilers && update.spoiler)}
+			{#if !($spoilers && update.number > global.spoiler)}
 				<li>
 					<time datetime={date}>{format(date).replace(/\//g, '.')}</time>
 					<p>
 						<a class="link" href="/chapter/{update.number}">
-							{#if update.spoiler}
+							{#if update.number > global.spoiler}
 								<span title="※ネタバレを含む内容">⚠️</span>
 							{/if}
 							第{update.number}話 "{update.title}"
@@ -51,5 +51,5 @@
 	import { format } from '$lib/Date.svelte'
 	import { spoilers } from '$lib/SpoilerToggle.svelte'
 
-	const { updates } = $page.data
+	const { updates, global } = $page.data
 </script>

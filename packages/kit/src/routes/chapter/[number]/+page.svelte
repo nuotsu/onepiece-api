@@ -11,30 +11,25 @@
 	</h1>
 </header>
 
-<section class="section grid gap-[1em] <sm:mx-0 items-start">
+<QuoteList>
 	{#if showSpoilers}
 		{#each chapter.quotes as quote}
 			<Quote {...quote} {chapter} />
 		{/each}
 	{/if}
-</section>
-
-<style>
-	@screen sm {
-		section {
-			grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-		}
-	}
-</style>
+</QuoteList>
 
 <script>
 	import Head from '$lib/Head.svelte'
-	import Quote from '$lib/Quote.svelte'
+	import QuoteList from '$lib/quote/QuoteList.svelte'
+	import Quote from '$lib/quote/Quote.svelte'
 	import { spoilers } from '$lib/SpoilerToggle.svelte'
+	import { page } from '$app/stores'
 
 	export let data
 
 	const { chapter } = data
+	const { global } = $page.data
 
-	$: showSpoilers = !($spoilers && chapter.spoiler)
+	$: showSpoilers = !($spoilers && chapter.number > global.spoiler)
 </script>

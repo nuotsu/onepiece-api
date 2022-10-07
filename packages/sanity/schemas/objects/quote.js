@@ -1,3 +1,5 @@
+import QuoteChars from '../../components/QuoteChars'
+
 export default {
 	name: 'quote',
 	title: 'Quote',
@@ -17,6 +19,7 @@ export default {
 					}
 				}
 			],
+			description: QuoteChars,
 		},
 		{
 			name: 'saidBy',

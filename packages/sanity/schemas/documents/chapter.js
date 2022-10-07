@@ -1,4 +1,5 @@
 import Icon from '../../components/Icon'
+import { spoiler } from '../../components/data'
 
 export default {
 	name: 'chapter',
@@ -6,11 +7,6 @@ export default {
 	icon: Icon('📕'),
 	type: 'document',
 	fields: [
-		{
-			name: 'spoiler',
-			type: 'boolean',
-			default: true,
-		},
 		{
 			name: 'number',
 			type: 'number',
@@ -30,11 +26,10 @@ export default {
 		select: {
 			title: 'title',
 			number: 'number',
-			spoiler: 'spoiler',
 		},
-		prepare: ({ number, spoiler, ...selection }) => ({
+		prepare: ({ number, ...selection }) => ({
 			subtitle: `第${ number }話`,
-			media: Icon(spoiler ? '📓' : '📕'),
+			media: Icon(number > spoiler ? '⚠️' : '📕'),
 			...selection
 		}),
 	},

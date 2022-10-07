@@ -1,12 +1,12 @@
-<section class="section">
+<section>
 	<h2>Chapters</h2>
 
 	<ul>
 		{#each chapters as chapter}
-			{#if !($spoilers && chapter.spoiler)}
+			{#if !($spoilers && chapter.number > global.spoiler)}
 				<li>
 					<a class="link-hover" href="/chapter/{chapter.number}">
-						{#if chapter.spoiler}
+						{#if chapter.number > global.spoiler}
 							<span title="※ネタバレを含む内容">⚠️</span>
 						{/if}
 						第{chapter.number}話 "{chapter.title}"
@@ -19,8 +19,8 @@
 </section>
 
 <script>
-	import { page } from '$app/stores'
 	import { spoilers } from '$lib/SpoilerToggle.svelte'
+	import { page } from '$app/stores'
 
-	const { chapters } = $page.data
+	const { chapters, global } = $page.data
 </script>

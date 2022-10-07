@@ -1,9 +1,9 @@
-<section class="section">
+<section>
 	<h2>
 		<a class="link-hover" href="/character">Characters</a>
 	</h2>
 
-	<ul class="flex flex-wrap gap-x-4">
+	<ul class="flex flex-wrap gap-y-2 gap-x-4">
 		{#each characters as character}
 			<li>
 				<a class="link" href="/character/{character.slug.current}">

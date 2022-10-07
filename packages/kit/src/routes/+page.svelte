@@ -1,8 +1,10 @@
 <Head />
 
 <Search/>
-<CharacterList/>
-<ChapterList/>
+<div class="section grid md:grid-cols-2 gap-4">
+	<CharacterList/>
+	<ChapterList/>
+</div>
 <UpdateList/>
 
 <script>

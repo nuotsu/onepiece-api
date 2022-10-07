@@ -12,7 +12,7 @@
 		{/if}
 	</blockquote>
 
-	<figcaption class="text-right <sm:text-xs mt-2">
+	<figcaption class="text-right text-xs mt-2">
 		—
 		{#each saidBy as character}
 			<a class="link-hover" href="/character/{character.slug.current}">

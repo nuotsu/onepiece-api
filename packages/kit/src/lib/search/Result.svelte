@@ -6,7 +6,7 @@
 
 <script>
 	import fuzzysort from 'fuzzysort'
-	import Quote from '../Quote.svelte'
+	import Quote from '../quote/Quote.svelte'
 
 	export let result
 

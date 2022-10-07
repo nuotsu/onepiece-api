@@ -17,14 +17,14 @@
 	import { query } from './Search.svelte'
 	import Result from './Result.svelte'
 
-	const { quotes_str } = $page.data
+	const { quotes_str, global } = $page.data
 
 	$: all_quotes = quotes_str
 		.flatMap(({ quotes, ...chapter }) => quotes.map(q => ({
 			chapter,
 			...q
 		})))
-		.filter(q => !$spoilers || !q.chapter.spoiler)
+		.filter(q => !$spoilers || !q.chapter.number > global.spoiler)
 
 	$: results = fuzzysort.go($query, all_quotes, { key: 'content' })
 </script>
