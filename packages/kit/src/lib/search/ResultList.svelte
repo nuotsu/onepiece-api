@@ -1,6 +1,6 @@
 <div class="bordered bg-paper shadow-xl shadow-ink/5">
 	<h2 class="text-center">
-		"{$query}"で検索した結果 {results.length}件該当
+		"<b>{$query}</b>"で検索した結果 {results.length}件該当
 	</h2>
 
 	<ul class="grid gap-[1em] max-h-[20em] overflow-y-auto mt-4 empty:hidden">
