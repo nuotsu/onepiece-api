@@ -1,4 +1,4 @@
-<fieldset class="flex flex-wrap items-end gap-[1em] py-2 px-4 bg-gray-200 text-sm">
+<fieldset class="flex flex-wrap items-end gap-x-[.5em] py-2 px-4 bg-bounty text-sm">
 	{#each keywords as { text, ruby }}
 		<button
 			class:selected={$query === text}
@@ -8,7 +8,7 @@
 			{#if ruby}
 				<ruby>{text}<rt>{ruby}</rt></ruby>
 			{:else}
-				{text}
+				<span>{text}</span>
 			{/if}
 		</button>
 	{/each}
@@ -16,12 +16,32 @@
 
 <style>
 	button {
+		position: relative;
 		display: flex;
 		align-items: flex-end;
+		padding: 0.25em .5em;
+	}
+
+	button * {
+		position: relative;
+		z-index: 1;
+	}
+
+	button::before {
+		content: '';
+		position: absolute;
+		inset:  auto 0 0;
+		z-index: 0;
+		height: calc(1.3em + .5em);
+		@apply bg-white rounded-full;
 	}
 
 	.selected {
-		@apply font-bold text-accent;
+		@apply text-paper before:bg-accent;
+	}
+
+	.selected rt {
+		@apply text-accent;
 	}
 </style>
 
@@ -32,6 +52,7 @@
 		{ text: 'ひとつなぎの大秘宝', ruby: 'ワンピース' },
 		{ text: '自由' },
 		{ text: '歴史の本文', ruby: 'ポーネグリフ' },
+		{ text: 'ゴムゴムの実' },
 		{ text: '王' },
 	]
 

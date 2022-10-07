@@ -1,3 +1,5 @@
+<Head title={character.name.short} />
+
 <header class="section text-center">
 	<h1>
 		{character.name.short}
@@ -33,6 +35,7 @@
 </style>
 
 <script>
+	import Head from '$lib/Head.svelte'
 	import { spoilers } from '$lib/SpoilerToggle.svelte'
 	import Quote from '$lib/Quote.svelte'
 

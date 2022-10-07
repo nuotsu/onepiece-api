@@ -1,4 +1,4 @@
-<figure class="bg-bounty p-2">
+<figure class="bg-bounty p-4">
 	<blockquote>
 		{#if content}
 			<PortableText
@@ -12,7 +12,7 @@
 		{/if}
 	</blockquote>
 
-	<figcaption class="text-right <sm:text-xs">
+	<figcaption class="text-right <sm:text-xs mt-2">
 		—
 		{#each saidBy as character}
 			<a class="link-hover" href="/character/{character.slug.current}">
@@ -29,6 +29,13 @@
 		{/if}
 	</figcaption>
 </figure>
+
+<style>
+	figure {
+		background-image: url(/bg-bounty.jpg);
+		background-size: 800px 82px;
+	}
+</style>
 
 <script>
 	import { PortableText } from '@portabletext/svelte'

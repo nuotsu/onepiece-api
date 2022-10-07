@@ -1,9 +1,9 @@
-<section class="section">
-	<h2>
-		<a class="link-hover" href="/character">Characters</a>
-	</h2>
+<Head {title} />
 
-	<ul class="flex flex-wrap gap-x-4">
+<h1 class="text-center">{title}</h1>
+
+<section class="section">
+	<ul class="sm:columns-2 md:columns-3 gap-4">
 		{#each characters as character}
 			<li>
 				<a class="link" href="/character/{character.slug.current}">
@@ -16,7 +16,11 @@
 </section>
 
 <script>
-	import { page } from '$app/stores'
+	import Head from '$lib/Head.svelte'
 
-	const { characters } = $page.data
+	const title = 'キャラ一覧'
+
+	export let data
+
+	const { characters } = data
 </script>

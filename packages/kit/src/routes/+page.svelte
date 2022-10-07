@@ -1,6 +1,4 @@
-<svelte:head>
-	<title>⊗NE PIECE</title>
-</svelte:head>
+<Head />
 
 <Search/>
 <CharacterList/>
@@ -8,6 +6,7 @@
 <UpdateList/>
 
 <script>
+	import Head from '$lib/Head.svelte'
 	import Search from '$lib/search/Search.svelte'
 	import CharacterList from './index/CharacterList.svelte'
 	import ChapterList from './index/ChapterList.svelte'

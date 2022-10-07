@@ -10,8 +10,8 @@
 							<span title="※ネタバレを含む内容">⚠️</span>
 						{/if}
 						第{chapter.number}話 "{chapter.title}"
-						<sup>({chapter.quotes.length})</sup>
 					</a>
+					<sup>({chapter.quotes.length})</sup>
 				</li>
 			{/if}
 		{/each}

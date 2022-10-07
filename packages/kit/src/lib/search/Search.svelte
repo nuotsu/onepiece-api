@@ -1,4 +1,7 @@
-<section class="section top-4 z-[1] p-2" class:sticky={$query}>
+<section
+	class="section top-4 z-[1] py-2 px-4"
+	class:sticky={$query}
+>
 	<label class="flex items-center p-0 bordered bg-paper">
 		<span class="p-2 px-4">🔎</span>
 		<input
