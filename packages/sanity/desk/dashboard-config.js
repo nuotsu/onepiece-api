@@ -2,21 +2,21 @@ export default {
 	widgets: [
 		{ name: 'project-info' },
 		{ name: 'project-users' },
-		// {
-		// 	name: 'netlify',
-		// 	options: {
-		// 		title: 'Netlify',
-		// 		sites: [
-		// 			{
-		// 				title: 'Production — live ',
-		// 				apiId: '6d4dadeb-ad63-4df4-bebd-e97ea0ba49a5',
-		// 				buildHookId: '62f9d0fa928db275f28fc6d9',
-		// 				name: 'Shohei Home Ground',
-		// 				// TODO: update URL
-		// 				url: 'https://shoheihomeground.netlify.app',
-		// 			},
-		// 		]
-		// 	}
-		// },
+		{
+			name: 'netlify',
+			options: {
+				title: 'Netlify',
+				sites: [
+					{
+						title: 'onepiece-api.netlify.app',
+						apiId: 'ff8473fd-a50f-48c7-bba3-490831b15f29',
+						buildHookId: '6340d74d8fe4804086f8e17f',
+						name: '⊗NE PIECE',
+						// TODO: update URL
+						url: 'https://onepiece-api.netlify.app',
+					},
+				]
+			}
+		},
 	]
 }
