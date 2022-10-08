@@ -1,5 +1,5 @@
 <div class="bordered bg-paper shadow-xl shadow-ink/5">
-	<h2 class="text-center">
+	<h2 class="text-center text-sm">
 		"<b>{$query}</b>"で検索した結果 {results.length}件該当
 	</h2>
 
@@ -20,7 +20,7 @@
 	const { quotes_str, global } = $page.data
 
 	$: all_quotes = quotes_str
-		.flatMap(({ quotes, ...chapter }) => quotes.map(q => ({
+		.flatMap(({ quotes, ...chapter }) => quotes?.map(q => ({
 			chapter,
 			...q
 		})))

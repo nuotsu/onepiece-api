@@ -1,4 +1,4 @@
-<section>
+<section class="self-start md:sticky top-4">
 	<h2>
 		<a class="link-hover" href="/character">Characters</a>
 	</h2>
