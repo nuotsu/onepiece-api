@@ -35,10 +35,15 @@ export default {
 	},
 	orderings: [
 		{
-			title: 'Chapter',
-			name: 'number',
+			title: 'Newest',
+			name: 'newest',
 			by: [{field: 'number', direction: 'desc'}],
 			default: true,
+		},
+		{
+			title: 'Oldest',
+			name: 'oldest',
+			by: [{field: 'number', direction: 'asc'}],
 		},
 		{
 			title: 'Title',

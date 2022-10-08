@@ -37,9 +37,12 @@ export default {
 	],
 	preview: {
 		select: {
-			title: 'name.short',
-			subtitle: 'name.full',
+			name: 'name',
 		},
+		prepare: ({ name }) => ({
+			title: name.short,
+			subtitle: [name.full, ...name.other || []].filter(Boolean).join(' / '),
+		})
 	},
 	orderings: [
 		{
