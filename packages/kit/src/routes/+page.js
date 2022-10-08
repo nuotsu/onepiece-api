@@ -1,10 +1,14 @@
 import client from '$utils/sanity'
 import groq from 'groq'
-import { quote_count } from '$utils/groq'
+import { live, quote_count } from '$utils/groq'
 
 export async function load() {
 	const data = await client.fetch(groq`{
-		'chapters': *[_type == 'chapter']|order(number desc),
+		'keywords': *[_type == 'keyword']|order(orderRank asc){
+			text, ruby
+		},
+
+		'chapters': *[_type == 'chapter' && ${live}]|order(number desc),
 
 		'characters': *[_type == 'character' && ${quote_count} > 1]
 		|order(name.short asc)
@@ -14,7 +18,7 @@ export async function load() {
 			'quote_count': ${quote_count}
 		},
 
-		'quotes_str': *[_type == 'chapter']{
+		'quotes_str': *[_type == 'chapter' && ${live}]{
 			spoiler,
 			number,
 			title,
@@ -27,7 +31,7 @@ export async function load() {
 			}
 		},
 
-		'updates': *[_type == 'chapter']|order(_createdAt desc){
+		'updates': *[_type == 'chapter' && ${live}]|order(_createdAt desc){
 			_createdAt,
 			spoiler,
 			number,

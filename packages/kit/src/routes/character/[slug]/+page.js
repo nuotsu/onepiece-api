@@ -20,5 +20,5 @@ export async function load({ params }) {
 		...data
 	}
 
-	throw error(404, 'Character found')
+	throw error(404, 'Character not found')
 }

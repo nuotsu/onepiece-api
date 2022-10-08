@@ -5,6 +5,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import global from './documents/global'
 import chapter from './documents/chapter'
 import character from './documents/character'
+import keyword from './documents/keyword'
 
 // objects
 import quote from './objects/quote'
@@ -16,6 +17,7 @@ export default createSchema({
     global,
     chapter,
     character,
+    keyword,
 
     // objects
     quote,

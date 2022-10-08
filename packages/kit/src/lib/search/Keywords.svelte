@@ -47,14 +47,9 @@
 
 <script>
 	import { query } from './Search.svelte'
+	import { page } from '$app/stores'
 
-	const keywords = [
-		{ text: 'ひとつなぎの大秘宝', ruby: 'ワンピース' },
-		{ text: '自由' },
-		{ text: 'ゴムゴムの実' },
-		{ text: '歴史の本文', ruby: 'ポーネグリフ' },
-		{ text: '王' },
-	]
+	const { keywords } = $page.data
 
 	function onClick(text) {
 		if ($query === text) {
