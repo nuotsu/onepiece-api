@@ -1,4 +1,5 @@
-<figure class="bg-bounty p-4">
+<figure>
+
 	<blockquote>
 		{#if content}
 			<PortableText
@@ -34,6 +35,12 @@
 	figure {
 		background-image: url(/bg-bounty.jpg);
 		background-size: 800px 82px;
+
+		@apply relative bg-bounty p-4;
+	}
+
+	figure:not(:hover) :global(.embed) {
+		display: none;
 	}
 </style>
 
@@ -41,7 +48,7 @@
 	import { PortableText } from '@portabletext/svelte'
 	import Dots from '$lib/pt/Dots.svelte'
 
-	export let quote, content, saidBy, chapter
+	export let quote, content, saidBy, chapter, _key
 
 	const components = {
 		marks: {

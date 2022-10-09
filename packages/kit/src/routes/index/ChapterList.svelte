@@ -10,12 +10,14 @@
 
 				<li>
 					<a class="link-hover" href="/chapter/{chapter.number}">
-						{#if chapter.number > global.spoiler}
-							<span title="※ネタバレを含む内容">⚠️</span>
-						{/if}
 						第{chapter.number}話 {title}
 					</a>
+
 					<sup>({chapter.quotes?.length || 0})</sup>
+
+					{#if chapter.number > global.spoiler}
+						<sup title="※ネタバレを含む内容">⚠️</sup>
+					{/if}
 				</li>
 			{/if}
 		{/each}

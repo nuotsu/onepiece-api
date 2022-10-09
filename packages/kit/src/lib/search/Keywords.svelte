@@ -1,7 +1,7 @@
 <fieldset class="flex flex-wrap items-end gap-x-[.5em] py-2 px-4 bg-bounty text-sm">
 	{#each keywords as { text, ruby }}
 		<button
-			class:selected={$query === text}
+			class:selected={[text, ruby].includes($query)}
 			on:click={() => onClick(text)}
 		>
 			<span class="opacity-30">#</span>
@@ -48,6 +48,7 @@
 <script>
 	import { query } from './Search.svelte'
 	import { page } from '$app/stores'
+    import { text } from 'svelte/internal';
 
 	const { keywords } = $page.data
 

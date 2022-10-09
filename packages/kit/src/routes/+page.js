@@ -10,12 +10,13 @@ export async function load() {
 
 		'chapters': *[_type == 'chapter' && ${live}]|order(number desc),
 
-		'characters': *[_type == 'character' && ${quote_count} > 1]
+		'characters': *[_type == 'character' && ${live} && ${quote_count} > 1]
 		|order(name.short asc)
 		|order(${quote_count} desc)
 		{
 			...,
-			'quote_count': ${quote_count}
+			'quote_count': ${quote_count},
+			'chapters': *[_type == 'chapter' && ^.slug.current in quotes[].saidBy[]->slug.current].number
 		},
 
 		'quotes_str': *[_type == 'chapter' && ${live}]{

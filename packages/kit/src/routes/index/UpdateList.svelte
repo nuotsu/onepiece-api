@@ -10,11 +10,11 @@
 					<time datetime={date}>{format(date).replace(/\//g, '.')}</time>
 					<p>
 						<a class="link" href="/chapter/{update.number}">
-							{#if update.number > global.spoiler}
-								<span title="※ネタバレを含む内容">⚠️</span>
-							{/if}
 							第{update.number}話 "{update.title}"
 						</a>
+						{#if update.number > global.spoiler}
+							<sup title="※ネタバレを含む内容">⚠️</sup>
+						{/if}
 						を追加。
 					</p>
 				</li>
