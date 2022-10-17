@@ -1,5 +1,5 @@
 <section class="section text-right">
-	<fieldset class="bordered max-w-max ml-auto">
+	<fieldset class="bordered py-2 px-4 max-w-max ml-auto">
 		<legend>⚠️ ネタバレ内容を:</legend>
 
 		<label class:underline={$spoilers === 1}>

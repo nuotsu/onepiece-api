@@ -10,7 +10,7 @@ export async function load() {
 
 		'chapters': *[_type == 'chapter' && ${live}]|order(number desc),
 
-		'characters': *[_type == 'character' && ${live} && ${quote_count} > 1]
+		'characters': *[_type == 'character' && ${live} && ${quote_count} > 2]
 		|order(name.short asc)
 		|order(${quote_count} desc)
 		{

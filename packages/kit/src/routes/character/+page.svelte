@@ -11,6 +11,10 @@
 				<li>
 					<a class="link" href="/character/{character.slug.current}">
 						{character.name.short}
+
+						{#if character.name.full}
+							<small>({character.name.full})</small>
+						{/if}
 					</a>
 
 					<sup>({character.quote_count})</sup>

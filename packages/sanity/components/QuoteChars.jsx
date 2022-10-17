@@ -1,8 +1,8 @@
 import React from 'react'
 
 const chars = [
-	'""',
 	'…',
+	'""',
 ]
 
 const Char = ({ value }) => (

@@ -9,16 +9,15 @@
 		{/if}
 
 		{#if quote}
-			<p>{@html quote}</p>
+			<p>{@html quote.replace(/\n/g, ' ')}</p>
 		{/if}
 	</blockquote>
 
 	<figcaption class="text-right text-xs mt-2">
 		—
-		{#each saidBy as character}
-			<a class="link-hover" href="/character/{character.slug.current}">
-				{character.name.short}
-			</a>
+		{#each saidBy as character, i}
+			<a class="link-hover" href="/character/{character.slug.current}">{character.name.short}</a><!--
+			-->{#if i < saidBy.length - 1}{', '}{/if}
 		{/each}
 
 		{#if chapter}
@@ -48,7 +47,9 @@
 	import { PortableText } from '@portabletext/svelte'
 	import Dots from '$lib/pt/Dots.svelte'
 
-	export let quote, content, saidBy, chapter, _key
+	export let quote, content, saidBy, chapter
+
+	console.log(quote)
 
 	const components = {
 		marks: {

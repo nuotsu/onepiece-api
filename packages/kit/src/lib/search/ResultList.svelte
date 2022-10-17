@@ -4,7 +4,7 @@
 	</h2>
 
 	<ul class="grid gap-[1em] max-h-[20em] overflow-y-auto mt-4 empty:hidden">
-		{#each results as result, i (i)}
+		{#each results as result (result)}
 			<li><Result {result} /></li>
 		{/each}
 	</ul>
