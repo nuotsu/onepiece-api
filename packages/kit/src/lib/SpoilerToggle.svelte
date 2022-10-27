@@ -2,22 +2,22 @@
 	<fieldset class="bordered py-2 px-4 max-w-max ml-auto">
 		<legend>⚠️ ネタバレ内容を:</legend>
 
-		<label class:underline={$spoilers === 1}>
+		<label class:underline={$spoilers}>
 			<input type="radio" hidden
 				name="spoilers"
 				value={1}
 				bind:group={$spoilers}
-				checked={$spoilers === 1}
+				checked={$spoilers}
 			/>
 			🫣 隠す
 		</label>
 		/
-		<label class:underline={$spoilers === 0} on:click|preventDefault={onChange}>
+		<label class:underline={!$spoilers} on:click|preventDefault={onChange}>
 			<input type="radio" hidden
 				name="spoilers"
 				value={0}
 				bind:group={$spoilers}
-				checked={$spoilers === 0}
+				checked={!$spoilers}
 			/>
 			表示する 👀
 		</label>
@@ -26,9 +26,9 @@
 
 <script>
 	function onChange() {
-		if ($spoilers == 1) {
+		if ($spoilers) {
 			if (confirm('ネタバレを含む内容を表示します。よろしいですか？')) {
-				$spoilers = 0
+				$spoilers = false
 			}
 		}
 	}
@@ -41,8 +41,8 @@
 	import { browser } from '$app/environment'
 
 	export const spoilers = writable(browser
-		? Number(localStorage.getItem('spoilers'))
-		: 1
+		? JSON.parse(localStorage.getItem('spoilers'))
+		: true
 	)
 
 	export function spoilerCheck(character, cap) {

@@ -15,7 +15,7 @@
 
 	$: resolveSpoilers = [...chapters]
 		.reverse()
-		.slice(0, $spoilers === 1 ? chapters.map(c => c.number).indexOf(global.spoiler) + 1 : chapters.length)
+		.slice(0, $spoilers ? chapters.map(c => c.number).indexOf(global.spoiler) + 1 : chapters.length)
 
 	$: ({ quotes, ...chapter } = resolveSpoilers[
 		Math.floor(Math.random() * resolveSpoilers.length)

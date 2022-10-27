@@ -24,7 +24,7 @@
 			chapter,
 			...q
 		})))
-		.filter(q => $spoilers !== 1 || !(q.chapter.number > global.spoiler))
+		.filter(q => !$spoilers || !(q.chapter.number > global.spoiler))
 
 	$: results = fuzzysort.go($query, all_quotes, { key: 'content' })
 </script>
