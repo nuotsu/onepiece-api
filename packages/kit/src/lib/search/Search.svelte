@@ -1,5 +1,5 @@
 <section
-	class="section top-4 z-10 py-2 px-4"
+	class="section top-0 md:top-4 z-10 px-4"
 	class:sticky={$query}
 >
 	<label class="flex items-center p-0 bordered bg-paper">
