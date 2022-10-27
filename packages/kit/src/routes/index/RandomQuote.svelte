@@ -13,7 +13,7 @@
 
 	const { chapters, global } = $page.data
 
-	$: resolveSpoilers = chapters
+	$: resolveSpoilers = [...chapters]
 		.reverse()
 		.slice(0, $spoilers === 1 ? chapters.map(c => c.number).indexOf(global.spoiler) + 1 : chapters.length)
 
