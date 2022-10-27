@@ -3,13 +3,18 @@
 
 	<div class="bordered p-2">
 		{#key random}
-			<Quote {...random} />
+			<Quote centered {...random} {hideSource} />
 		{/key}
 	</div>
 
-	<p class="text-right text-xs">
-		<button class="text-ink/30 link" on:click={() => { random = getRandom() }}>
-			Randomize
+	<p class="flex gap-[1em] justify-end text-xs mt-1">
+		<label>
+			<input type="checkbox" bind:checked={hideSource} />
+			引用元を隠す
+		</label>
+
+		<button class="link-hover" on:click={() => { random = getRandom() }}>
+			🔀 Randomize
 		</button>
 	</p>
 </section>
@@ -33,6 +38,8 @@
 	import { page } from '$app/stores'
 
 	const { chapters, global } = $page.data
+
+	let hideSource = false
 
 	let random = getRandom()
 

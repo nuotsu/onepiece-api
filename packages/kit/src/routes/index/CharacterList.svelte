@@ -1,7 +1,5 @@
 <section class="self-start md:sticky top-4">
-	<h2 class="heading">
-		<a class="link-hover" href="/character">Characters</a>
-	</h2>
+	<h2 class="heading">Characters</h2>
 
 	<ul class="flex flex-wrap gap-4 <md:gap-y-2 justify-center">
 		{#each characters as character}
@@ -22,6 +20,10 @@
 			{/if}
 		{/each}
 	</ul>
+
+	<p class="text-center text-xs mt-4">
+		<a class="link-hover" href="/character">キャラ一覧へ 👉</a>
+	</p>
 </section>
 
 <script>

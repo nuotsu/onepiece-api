@@ -1,11 +1,11 @@
 <Head title={character.name.short} />
 
 <header class="section text-center">
-	<h1>
+	<h1 class="h1 mx-auto">
 		{character.name.short}
 
 		{#if names.length}
-			<small>
+			<small class="font-normal">
 				({#each names as name, i}<span>{name}</span>{#if i < names.length-1}/{/if}{/each})
 			</small>
 		{/if}

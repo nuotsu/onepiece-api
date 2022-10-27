@@ -1,6 +1,8 @@
 <Head {title} />
 
-<h1 class="text-center">{title}</h1>
+<header>
+	<h1 class="h1 mx-auto">{title}</h1>
+</header>
 
 <section class="section">
 	<ul class="sm:columns-2 md:columns-3 gap-4">

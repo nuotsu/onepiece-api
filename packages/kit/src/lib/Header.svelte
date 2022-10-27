@@ -1,6 +1,6 @@
 <header class="section text-center">
-	<a class="heading font-normal" href="/">
+	<a class="block h1 mx-auto font-normal" href="/">
 		<ruby>⊗NE PIECE<rt>ワンピース</rt></ruby>
-		胸アツ&重要セリフ
+		<span class="inline-block">胸アツ&重要セリフ</span>
 	</a>
 </header>

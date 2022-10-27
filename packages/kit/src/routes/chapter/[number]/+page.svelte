@@ -1,8 +1,11 @@
 <Head title='第{chapter.number}話 "{chapter.title}"' />
 
 <header class="section text-center">
-	<h1>
-		第{chapter.number}話
+	<h1 class="h1 mx-auto">
+		<span class="font-normal">
+			第{chapter.number}話
+		</span>
+
 		{#if showSpoilers}
 			"{chapter.title}"
 		{:else}

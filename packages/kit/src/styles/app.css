@@ -64,6 +64,8 @@
 
 		@apply bg-bounty;
 	}
+
+	.h1 { @apply heading text-xl; }
 }
 
 @layer utilities {

@@ -1,5 +1,5 @@
 <figure>
-	<blockquote>
+	<blockquote class:text-center={centered}>
 		{#if content}
 			<PortableText
 				value={content}
@@ -12,21 +12,23 @@
 		{/if}
 	</blockquote>
 
-	<figcaption class="text-right text-xs mt-2">
-		—
-		{#each saidBy as character, i}
-			<a class="link-hover" href="/character/{character.slug.current}">{character.name.short}</a><!--
-			-->{#if i < saidBy.length - 1}{', '}{/if}
-		{/each}
+	{#if !hideSource}
+		<figcaption class="text-right text-xs mt-2">
+			—
+			{#each saidBy as character, i}
+				<a class="link-hover" href="/character/{character.slug.current}">{character.name.short}</a><!--
+				-->{#if i < saidBy.length - 1}{', '}{/if}
+			{/each}
 
-		{#if chapter}
-			<cite>
-				<a class="link-hover" href="/chapter/{chapter.number}">
-					(第{chapter.number}話 "{chapter.title}")
-				</a>
-			</cite>
-		{/if}
-	</figcaption>
+			{#if chapter}
+				<cite>
+					<a class="link-hover" href="/chapter/{chapter.number}">
+						(第{chapter.number}話 "{chapter.title}")
+					</a>
+				</cite>
+			{/if}
+		</figcaption>
+	{/if}
 </figure>
 
 <style>
@@ -47,6 +49,7 @@
 	import Dots from '$lib/pt/Dots.svelte'
 
 	export let quote, content, saidBy, chapter
+	export let centered, hideSource
 
 	const components = {
 		marks: {

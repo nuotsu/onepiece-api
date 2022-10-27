@@ -1,8 +1,8 @@
 <section class="section text-right">
-	<fieldset class="bordered py-2 px-4 max-w-max ml-auto">
+	<fieldset class="bordered border-dashed border-accent py-2 px-4 max-w-max ml-auto">
 		<legend>⚠️ ネタバレ内容を:</legend>
 
-		<label class:underline={$spoilers}>
+		<label class:active={$spoilers}>
 			<input type="radio" hidden
 				name="spoilers"
 				value={1}
@@ -12,7 +12,7 @@
 			🫣 隠す
 		</label>
 		/
-		<label class:underline={!$spoilers} on:click|preventDefault={onChange}>
+		<label class:active={!$spoilers} on:click|preventDefault={onChange}>
 			<input type="radio" hidden
 				name="spoilers"
 				value={0}
@@ -23,6 +23,13 @@
 		</label>
 	</fieldset>
 </section>
+
+<style>
+	.active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+</style>
 
 <script>
 	function onChange() {

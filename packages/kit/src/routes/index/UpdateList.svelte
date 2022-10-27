@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section max-w-screen-md">
 	<h2 class="heading -mb-4">Updates</h2>
 
 	<ul class="bordered max-h-[11em] <md:max-h-[15em] overflow-y-auto">
