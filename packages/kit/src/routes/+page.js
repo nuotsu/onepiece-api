@@ -8,7 +8,16 @@ export async function load() {
 			text, ruby
 		},
 
-		'chapters': *[_type == 'chapter' && ${live}]|order(number desc),
+		'chapters': *[_type == 'chapter' && ${live}]|order(number desc){
+			...,
+			quotes[]{
+				...,
+				saidBy[]->{
+					name,
+					slug
+				}
+			}
+		},
 
 		'characters': *[_type == 'character' && ${live} && ${quote_count} > 2]
 		|order(name.short asc)
