@@ -37,8 +37,8 @@
 
 	export let data
 
-	const { character, chapters } = data
-	const { global } = $page.data
+	$: ({ character, chapters } = data)
+	$: ({ global } = $page.data)
 
-	const names = [character.name.full, ...character.name.other || []].filter(Boolean)
+	$: names = [character.name.full, ...character.name.other || []].filter(Boolean)
 </script>

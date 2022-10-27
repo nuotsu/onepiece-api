@@ -10,7 +10,7 @@
 
 				<li>
 					<a class="link-hover" href="/chapter/{chapter.number}">
-						第{chapter.number}話 <span class="inline-block">{title}</span>
+						第{chapter.number}話 <span>{title}</span>
 					</a>
 
 					<sup>({chapter.quotes?.length || 0})</sup>
@@ -23,6 +23,13 @@
 		{/each}
 	</ul>
 </section>
+
+<style>
+	span {
+		display: inline-block;
+		text-decoration: inherit;
+	}
+</style>
 
 <script>
 	import { spoilers } from '$lib/SpoilerToggle.svelte'
