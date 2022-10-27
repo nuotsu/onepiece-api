@@ -1,4 +1,4 @@
-<fieldset class="flex flex-wrap items-end gap-x-[.5em] py-2 px-4 bg-bounty text-sm">
+<fieldset class="relative z-[1] flex flex-wrap items-end gap-x-[.5em] py-2 px-4 bg-bounty text-sm">
 	{#each keywords as { text, ruby }}
 		<button
 			class:selected={[text, ruby].includes($query)}

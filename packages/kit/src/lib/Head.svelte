@@ -9,5 +9,5 @@
 <script>
 	export let title
 
-	const name = '⊗NE PIECE 重要セリフ'
+	const name = '⊗NE PIECE 胸アツ&重要セリフ'
 </script>

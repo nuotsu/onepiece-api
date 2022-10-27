@@ -1,5 +1,5 @@
 <section
-	class="section top-4 z-[1] py-2 px-4"
+	class="section top-4 z-10 py-2 px-4"
 	class:sticky={$query}
 >
 	<label class="flex items-center p-0 bordered bg-paper">
@@ -20,6 +20,10 @@
 </section>
 
 <style>
+	section {
+		perspective: 1000px;
+	}
+
 	input {
 		appearance: none;
 		background-color: transparent;

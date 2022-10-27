@@ -1,7 +1,7 @@
 <section class="section max-w-screen-md mx-auto">
-	<h2 class="text-center">Random Quote</h2>
+	<h2 class="heading -mb-2 text-center">Random Quote</h2>
 
-	<div class="p-2 border border-bounty">
+	<div class="bordered p-2">
 		<Quote {chapter} {...quote} />
 	</div>
 </section>

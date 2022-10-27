@@ -1,5 +1,5 @@
 <section class="section">
-	<h2>Updates</h2>
+	<h2 class="heading -mb-4">Updates</h2>
 
 	<ul class="bordered max-h-[11em] <md:max-h-[15em] overflow-y-auto">
 		{#each updates as update}

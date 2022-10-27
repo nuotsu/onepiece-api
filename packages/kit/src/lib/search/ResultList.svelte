@@ -3,12 +3,25 @@
 		"<b>{$query}</b>"で検索した結果 {results.length}件該当
 	</h2>
 
-	<ul class="grid gap-[1em] max-h-[20em] overflow-y-auto mt-4 empty:hidden">
+	<ul class="grid gap-[1em] max-h-[20em] md:max-h-[40em] overflow-y-auto mt-4 empty:hidden">
 		{#each results as result (result)}
 			<li><Result {result} /></li>
 		{/each}
 	</ul>
 </div>
+
+<style>
+	div {
+		animation: appear .2s ease-in-out forwards;
+		transform-origin: top;
+	}
+
+	@keyframes appear {
+		from {
+			transform: rotateX(-90deg);
+		}
+	}
+</style>
 
 <script>
 	import { page } from '$app/stores'

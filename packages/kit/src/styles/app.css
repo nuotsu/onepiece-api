@@ -44,6 +44,26 @@
 	.bordered {
 		@apply p-4 border border-bounty;
 	}
+
+	/* headings */
+
+	.heading {
+		position: relative;
+		z-index: 1;
+		padding: .25em 0;
+		font-weight: bold;
+
+		@apply max-w-max;
+	}
+	.heading::before {
+		content: '';
+		position: absolute;
+		inset: .8ch -1ch;
+		z-index: -1;
+		rotate: -2deg;
+
+		@apply bg-bounty;
+	}
 }
 
 @layer utilities {

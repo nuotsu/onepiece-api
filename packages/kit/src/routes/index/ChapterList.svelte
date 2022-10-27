@@ -1,7 +1,7 @@
 <section>
-	<h2>Chapters</h2>
+	<h2 class="heading -mb-4">Chapters</h2>
 
-	<ul>
+	<ul class="bordered max-h-[20em] overflow-y-auto">
 		{#each chapters as chapter}
 			{#if !($spoilers && chapter.number > global.spoiler)}
 				{@const title = chapter.title.includes('"')
@@ -10,7 +10,7 @@
 
 				<li>
 					<a class="link-hover" href="/chapter/{chapter.number}">
-						第{chapter.number}話 {title}
+						第{chapter.number}話 <span class="inline-block">{title}</span>
 					</a>
 
 					<sup>({chapter.quotes?.length || 0})</sup>
