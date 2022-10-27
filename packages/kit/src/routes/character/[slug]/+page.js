@@ -7,7 +7,7 @@ export async function load({ params }) {
 
 	const data = await client.fetch(groq`{
 		'character': *[_type == 'character' && slug.current == $slug][0],
-		'chapters': *[_type == 'chapter' && $slug in quotes[].saidBy[]->slug.current]|order(number asc){
+		'chapters': *[_type == 'chapter' && $slug in quotes[].saidBy[]->slug.current]|order(number desc){
 			...,
 			quotes[$slug in saidBy[]->slug.current]{
 				...,
