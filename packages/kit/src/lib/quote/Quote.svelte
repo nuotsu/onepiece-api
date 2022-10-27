@@ -1,5 +1,4 @@
 <figure>
-
 	<blockquote>
 		{#if content}
 			<PortableText
@@ -48,8 +47,6 @@
 	import Dots from '$lib/pt/Dots.svelte'
 
 	export let quote, content, saidBy, chapter
-
-	console.log(quote)
 
 	const components = {
 		marks: {
