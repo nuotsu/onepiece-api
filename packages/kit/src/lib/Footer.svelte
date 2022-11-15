@@ -1,3 +1,3 @@
 <footer class="section text-center">
-	<a href="/" title="⊗NE PIECE">🏴‍☠️</a>
+	<a href="/" title="⊗NE PIECE セリフ図鑑">🏴‍☠️👒⚓️</a>
 </footer>

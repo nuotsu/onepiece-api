@@ -5,10 +5,7 @@ import { quote_count } from '$utils/groq'
 export async function load() {
 	return {
 		characters: await client.fetch(groq`
-			*[_type == 'character']
-			|order(name.full asc)
-			|order(name.short asc)
-			{
+			*[_type == 'character']{
 				...,
 				'quote_count': ${quote_count},
 				'chapters': *[_type == 'chapter' && ^.slug.current in quotes[].saidBy[]->slug.current].number

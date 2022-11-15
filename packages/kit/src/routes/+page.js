@@ -19,7 +19,7 @@ export async function load() {
 			}
 		},
 
-		'characters': *[_type == 'character' && ${live} && ${quote_count} > 2]
+		'characters': *[_type == 'character' && ${live} && ${quote_count} > 3]
 		|order(name.short asc)
 		|order(${quote_count} desc)
 		{
