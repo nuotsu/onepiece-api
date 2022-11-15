@@ -1,5 +1,6 @@
+import React from 'react'
 import Icon from '../../components/Icon'
-import { spoiler } from '../../components/data'
+import LiveIcon from '../../components/LiveIcon'
 
 export default {
 	name: 'chapter',
@@ -29,7 +30,7 @@ export default {
 		},
 		prepare: ({ number, ...selection }) => ({
 			subtitle: `第${ number }話`,
-			media: Icon(number > spoiler ? '⚠️' : '📕'),
+			media: <LiveIcon number={number} />,
 			...selection
 		}),
 	},
