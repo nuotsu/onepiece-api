@@ -1,1 +1,1 @@
-export const spoiler = 1046
+export const spoiler = 1055
